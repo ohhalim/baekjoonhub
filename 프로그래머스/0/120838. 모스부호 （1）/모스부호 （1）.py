@@ -8,6 +8,6 @@ def solution(letter):
     '-.--':'y','--..':'z'
 }
     answer=[]
-    for i in letter.split(' '):
-        answer.append(morse[i])
-    return ''.join(answer)
+    for i in letter.split(' '):# 공백으로 분리된 letter 문자열을 i로 순환
+        answer.append(morse[i]) # morse 딕셔너리에서 i 가 있으면 append 로 더함 answer에 
+    return ''.join(answer) # answer를 ''문자열로 만듬
