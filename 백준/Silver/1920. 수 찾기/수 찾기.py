@@ -1,13 +1,16 @@
-# 전역 코드로 풀이
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-A = list(map(int, input().split()))
+a = set(map(int, input().split()))
 m = int(input())
-targets = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
-A_set = set(A)  # 탐색 속도를 높이기 위해 집합으로 변환
-
-for target in targets:
-    if target in A_set:
-        print(1)
-    else:
-        print(0)
+result = []
+for x in b:
+    if x in a:
+        result.append('1')
+    else: 
+        result.append('0')
+        
+print('\n'.join(result))
